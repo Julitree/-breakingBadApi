@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400&display=swap");
+h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../assets/img/binding_dark.png);
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+}
+body header {
+  display: flex;
+  justify-content: center;
+}
+body header .logoContainer {
+  height: 200px;
+}
+body header .logoContainer img {
+  height: 100%;
+}
+body section .gridContainer {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 767px) {
+  body section .gridContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px 20px;
+  }
+}
+@media (min-width: 810px) {
+  body section .gridContainer {
+    width: 90%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px 10px;
+  }
+}
+body section .gridContainer .cardContainer {
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+body section .gridContainer .cardContainer .imgContainer {
+  width: 100%;
+}
+@media (min-width: 767px) {
+  body section .gridContainer .cardContainer .imgContainer {
+    height: 300px;
+  }
+}
+body section .gridContainer .cardContainer .imgContainer img {
+  width: 100%;
+}
+@media (min-width: 767px) {
+  body section .gridContainer .cardContainer .imgContainer img {
+    height: 100%;
+  }
+}
+body section .gridContainer .cardContainer .infoContainer {
+  padding: 0 17px 10px;
+  display: flex;
+  flex-direction: column;
+  background: #f1b215;
+}
+@media (min-width: 767px) {
+  body section .gridContainer .cardContainer .infoContainer {
+    height: 40%;
+  }
+}
+body section .gridContainer .cardContainer .infoContainer p {
+  line-height: 1.5rem;
+}
+body section .gridContainer .cardContainer .infoContainer p span {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+/*# sourceMappingURL=style.css.map */

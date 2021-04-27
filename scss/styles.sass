@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400&display=swap')
+    
+$breakpoint-tablet: 767px
+$breakpoint-desktop: 810px
+
+@mixin media($media)
+  @if  $media == tablet
+    @media (min-width: $breakpoint-tablet)
+        @content
+  @else if $media == desktop 
+    @media (min-width: $breakpoint-desktop)
+        @content
+
+
+h1,p
+    margin: 0
+    padding: 0
+
+body
+    background-image: url(../assets/img/binding_dark.png)
+    font-family: 'Roboto Slab', serif
+    font-weight: 400
+    header
+        display: flex
+        justify-content: center
+        .logoContainer
+            height: 200px
+            img
+                height: 100%
+    section
+        .gridContainer
+            width: 80%
+            margin: auto
+            display: grid
+            grid-gap: 20px
+            grid-template-columns: 1fr
+            @include media(tablet)
+                grid-template-columns: 1fr 1fr
+                grid-gap: 40px 20px
+            @include media(desktop)
+                width: 90%
+                grid-template-columns: 1fr 1fr 1fr
+                grid-gap: 50px 10px
+            .cardContainer
+                position: relative
+                box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%)
+                .imgContainer
+                    width: 100%
+                    @include media(tablet)
+                        height: 300px 
+                    img
+                        width: 100%
+                        @include media(tablet)
+                            height: 100%
+                .infoContainer
+                    padding: 0 17px 10px
+                    display: flex
+                    flex-direction: column
+                    background: rgba(241,178,21,1)
+                    @include media(tablet)
+                        height: 40%
+                    p
+                        line-height: 1.5rem
+                        span
+                            font-size: 0.9rem
+                            font-weight: 300
+
+
